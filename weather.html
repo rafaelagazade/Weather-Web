@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" type="image/png" href="./img/ico.png">
+    <link rel="stylesheet" href="./weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="name">
+        <div>Weather.app</div>
+        <Button>Change Color</button>
+    </div>
+    <section class="main">
+        <div class="container">
+            <div class="search">
+                <input type="search" placeholder="search">
+                <div class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="cancel-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="location" id="location"><h1>~</h1></div>
+            
+            <div class="cloudAnimation" id="cloudAnimation">~</div>
+
+            <div class="temperature" id="temperature">
+                <h1>#</h1>
+                <span class="measure">
+                    <i class="fa-solid fa-c"></i>
+                </span>
+                <div class="unit">
+                    click to change
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
+    <script src="./weather.js"></script>
+</body>
+</html>
