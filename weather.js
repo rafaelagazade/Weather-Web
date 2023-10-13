@@ -89,6 +89,9 @@ const cancelBtn = document.querySelector(".cancel-btn");
 const lupa = document.querySelector(".fa-magnifying-glass");
 
 searchBtn.addEventListener("click", () => {
+  const XS = window.matchMedia("(max-width: 350px)");
+  const S = window.matchMedia("(max-width: 399px)");
+  const M = window.matchMedia("(max-width: 499px)");
   const L = window.matchMedia("(max-width: 768px)");
   const XL = window.matchMedia("(max-width: 1024px)");
 
@@ -104,10 +107,16 @@ searchBtn.addEventListener("click", () => {
         setTimeout(() => {
           cancelBtn.style.display = "flex";
           cancelBtn.style.marginLeft = "290px";
-          if (L.matches) {
-            cancelBtn.style.marginLeft = "470px";
+          if (XS.matches) {
+            cancelBtn.style.marginLeft = "295px";
+          } else if (S.matches) {
+            cancelBtn.style.marginLeft = "310px";
+          } else if (M.matches) {
+            cancelBtn.style.marginLeft = "320px";
+          } else if (L.matches) {
+            cancelBtn.style.marginLeft = "560px";
           } else if (XL.matches) {
-            cancelBtn.style.marginLeft = "700px";
+            cancelBtn.style.marginLeft = "730px";
           }
         }, 50);
       }, 50);
